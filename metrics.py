@@ -6,3 +6,11 @@ import skll
 
 def quadratic_weighted_kappa(y_true, y_pred):
     kappa_score = skll.kappa(y_true, y_pred, weights='quadratic', allow_off_by_one=False)
+    return kappa_score
+
+
+y = [1,1,1]
+gty = [1,1,1]
+
+sc = quadratic_weighted_kappa(y,gty)
+print(sc)
